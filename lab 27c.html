@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Average</title>
+    <script>
+        // Function without parameters
+        function averageWithoutParams() {
+            var num1 = parseFloat(prompt("Enter the first number:"));
+            var num2 = parseFloat(prompt("Enter the second number:"));
+            var num3 = parseFloat(prompt("Enter the third number:"));
+
+            var average = (num1 + num2 + num3) / 3;
+            document.write("The average of the three numbers: "+num1+", "+num2+", "+num3+ " is: " + average+"<br>");
+        }
+
+        // Function with parameters and non-returning values
+        function averageWithParams(num1, num2, num3) {
+            var average = (num1 + num2 + num3) / 3;
+            document.write("The average of the three numbers: "+num1+", "+num2+", "+num3+ " is: " + average+"<br>");
+        }
+
+        // Function with parameters and returning values
+        function averageWithReturn(num1, num2, num3) {
+            var average = (num1 + num2 + num3) / 3;
+            return average;
+        }
+
+        // Call the functions
+        averageWithoutParams();
+        averageWithParams(10, 20, 30);
+        var result = averageWithReturn(15, 25, 35);
+        document.write("The average of the three numbers is: " + result);
+    </script>
+</head>
+<body>
+</body>
+</html>

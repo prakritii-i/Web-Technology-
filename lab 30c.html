@@ -1,0 +1,32 @@
+<!--A web page containing a paragraph. Add a HTML mouse event for changing text color
+and background color when it is hovered and returning a default color and background
+when it is hovered out.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		
+		function changeStyle(){
+			var txt1=document.getElementById("p");
+			txt1.style.backgroundColor="pink";
+			txt1.style.color="red";
+		}
+		function resetStyle() {
+            var paragraph = document.getElementById("p");
+            paragraph.style.backgroundColor = ""; // Reset background color
+            paragraph.style.color = ""; // Reset text color
+        }
+	</script>
+</head>
+<body>
+<p id="p">
+	A web page containing a paragraph. Add a HTML mouse event for changing text color
+and background color when it is hovered and returning a default color and background
+when it is hovered out.
+</p>
+<button onmouseover="changeStyle()" onmouseout="resetStyle()" style="cursor: pointer;">Change Color</button>
+</body>
+</html>

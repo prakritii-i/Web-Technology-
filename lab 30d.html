@@ -1,0 +1,25 @@
+<!--A web page containing an image. Add a HTML mouse event for replacing an image by
+another one it is hovered with and returning the default image when it is hovered out.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		
+		function changeStyle(){
+			var Image=document.getElementById("img1");
+			Image.src="pic2.jpg"
+		}
+		function resetStyle() {
+            var Image = document.getElementById("img1");
+            Image.src="pic1.jpg"
+        }
+	</script>
+</head>
+<body>
+<img src="pic1.jpg" id="img1" onmouseover="changeStyle()" onmouseout="resetStyle()">
+<!--<button onmouseover="changeStyle()" onmouseout="resetStyle()">Change Image</button>-->
+</body>
+</html>

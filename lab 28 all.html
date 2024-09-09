@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Solutions</title>
+</head>
+<body>
+<h1>JavaScript Solutions</h1>
+
+<!-- a. Write a program in JavaScript that asks two numbers from the user and displays the sum of those two numbers. (TU 2015) -->
+<h2>a. Sum of Two Numbers:</h2>
+<input type="number" id="num1" placeholder="Enter first number">
+<input type="number" id="num2" placeholder="Enter second number">
+<button onclick="calculateSum()">Calculate Sum</button>
+<p id="sumResult"></p>
+
+<!-- b. Write a JavaScript code to create an array that holds the following musical instruments: murchunga, madal, and sarangi. Convert the array into a string and print that array. (TU 2015) -->
+<h2>b. Musical Instruments:</h2>
+<p id="musicalInstruments"></p>
+
+<!-- c. Write a JavaScript function that checks if the password and retyped password of two different password fields are the same or not. (TU 2016) -->
+<h2>c. Check Password Match:</h2>
+<input type="password" id="password1" placeholder="Enter password">
+<input type="password" id="password2" placeholder="Re-type password">
+<button onclick="checkPasswordsMatch()">Check Password Match</button>
+<p id="passwordMatchResult"></p>
+
+<!-- d. Write a JavaScript code to calculate the difference between two dates given by the user. (TU 2016) -->
+<h2>d. Date Difference:</h2>
+<input type="date" id="date1">
+<input type="date" id="date2">
+<button onclick="calculateDateDifference()">Calculate Difference</button>
+<p id="dateDifferenceResult"></p>
+
+<!-- e. Write a JavaScript function that takes two strings as arguments and checks them for equality. If both strings are equal, then display the first string in uppercase; otherwise, return “the two strings do not match”. (TU 2017) -->
+<h2>e. Check String Equality:</h2>
+<input type="text" id="string1" placeholder="Enter first string">
+<input type="text" id="string2" placeholder="Enter second string">
+<button onclick="checkStringEquality()">Check String Equality</button>
+<p id="stringEqualityResult"></p>
+
+<!-- f. Write a program in JavaScript to add two prime numbers only. (TU 2017) -->
+<h2>f. Sum of Two Prime Numbers:</h2>
+<button onclick="addTwoPrimes()">Add Two Primes</button>
+<p id="primeSumResult"></p>
+
+<!-- g. Write a JavaScript function checkSquare that accepts two arguments length and breadth. The function returns “The object is square” if length and breadth are equal; otherwise, return “the object is rectangle”. (TU 2018) -->
+<h2>g. Check Shape:</h2>
+<input type="number" id="length" placeholder="Enter length">
+<input type="number" id="breadth" placeholder="Enter breadth">
+<button onclick="checkShape()">Check Shape</button>
+<p id="shapeCheckResult"></p>
+
+<!-- h. Write a JavaScript program to add odd numbers of a list. (TU 2019) -->
+<h2>h. Sum of Odd Numbers:</h2>
+<input type="text" id="oddNumbersList" placeholder="Enter numbers separated by comma">
+<button onclick="addOddNumbers()">Add Odd Numbers</button>
+<p id="oddNumbersSumResult"></p>
+
+<!-- i. Write a JavaScript program that takes a string from the user and displays it in reverse order. -->
+<h2>i. Reverse String:</h2>
+<input type="text" id="inputString" placeholder="Enter a string">
+<button onclick="reverseString()">Reverse</button>
+<p id="reversedString"></p>
+
+<script>
+// a. Write a program in JavaScript that asks two numbers from the user and displays the sum of those two numbers. (TU 2015)
+function calculateSum() {
+  var num1 = parseInt(document.getElementById('num1').value);
+  var num2 = parseInt(document.getElementById('num2').value);
+  var sum = num1 + num2;
+  document.getElementById('sumResult').innerText = 'Sum of ' + num1 + ' and ' + num2 + ' is: ' + sum;
+}
+
+// b. Write a JavaScript code to create an array that holds the following musical instruments: murchunga, madal, and sarangi. Convert the array into a string and print that array. (TU 2015)
+var musicalInstruments = ["murchunga", "madal", "sarangi"];
+document.getElementById('musicalInstruments').innerText = musicalInstruments.join(", ");
+
+// c. Write a JavaScript function that checks if the password and retyped password of two different password fields are the same or not. (TU 2016)
+function checkPasswordsMatch() {
+  var password1 = document.getElementById('password1').value;
+  var password2 = document.getElementById('password2').value;
+  var result = password1 === password2 ? "Passwords match!" : "Passwords do not match!";
+  document.getElementById('passwordMatchResult').innerText = result;
+}
+
+// d. Write a JavaScript code to calculate the difference between two dates given by the user. (TU 2016)
+function calculateDateDifference() {
+  var date1 = new Date(document.getElementById('date1').value);
+  var date2 = new Date(document.getElementById('date2').value);
+  var difference = Math.abs(date1.getTime() - date2.getTime());
+  var daysDifference = Math.ceil(difference / (1000 * 3600 * 24));
+  document.getElementById('dateDifferenceResult').innerText = 'Difference between the dates is: ' + daysDifference + ' days';
+}
+
+// e. Write a JavaScript function that takes two strings as arguments and checks them for equality. If both strings are equal, then display the first string in uppercase; otherwise, return “the two strings do not match”. (TU 2017)
+function checkStringEquality() {
+  var string1 = document.getElementById('string1').value;
+  var string2 = document.getElementById('string2').value;
+  var result = string1 === string2 ? string1.toUpperCase() : "The two strings do not match";
+  document.getElementById('stringEqualityResult').innerText = result;
+}
+
+// f. Write a program in JavaScript to add two prime numbers only. (TU 2017)
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (var i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+
+function addTwoPrimes() {
+  var num1 = 2;
+  var num2 = 3;
+  var sum = 0;
+  var count = 0;
+  while (count < 2) {
+    if (isPrime(num1) && isPrime(num2)) {
+      sum = num1 + num2;
+      count++;
+    }
+    num1++;
+    num2++;
+  }
+  document.getElementById('primeSumResult').innerText = 'Sum of two prime numbers: ' + sum;
+}
+
+// g. Write a JavaScript function checkSquare that accepts two arguments length and breadth. The function returns “The object is square” if length and breadth are equal; otherwise, return “the object is rectangle”. (TU 2018)
+function checkShape() {
+  var length = parseInt(document.getElementById('length').value);
+  var breadth = parseInt(document.getElementById('breadth').value);
+  var result = length === breadth ? "The object is square" : "The object is rectangle";
+  document.getElementById('shapeCheckResult').innerText = result;
+}
+
+// h. Write a JavaScript program to add odd numbers of a list. (TU 2019)
+function addOddNumbers() {
+  var numbersList = document.getElementById('oddNumbersList').value.split(",").map(Number);
+  var sum = 0;
+  for (var i = 0; i < numbersList.length; i++) {
+    if (numbersList[i] % 2 !== 0) {
+      sum += numbersList[i];
+    }
+  }
+  document.getElementById('oddNumbersSumResult').innerText = 'Sum of odd numbers: ' + sum;
+}
+
+// i. Write a JavaScript program that takes a string from the user and displays it in reverse order.
+function reverseString() {
+  var inputString = document.getElementById('inputString').value;
+  var reversedString = inputString.split("").reverse().join("");
+  document.getElementById('reversedString').innerText = reversedString;
+}
+</script>
+
+</body>
+</html>

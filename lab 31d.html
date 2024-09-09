@@ -1,0 +1,29 @@
+<!--Write a javascript code to execute some HTML keyboard event such as onkeydown,
+onkeypress, onkeyup more.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyboard Events</title>
+</head>
+<body>
+
+<input type="text" id="myInput" onkeydown="onKeyDown(event)" onkeypress="onKeyPress(event)" onkeyup="onKeyUp(event)">
+
+<script>
+    function onKeyDown(event) {
+        console.log("Key down: " + event.key);
+    }
+
+    function onKeyPress(event) {
+        console.log("Key pressed: " + event.key);
+    }
+
+    function onKeyUp(event) {
+        console.log("Key up: " + event.key);
+    }
+</script>
+
+</body>
+</html>

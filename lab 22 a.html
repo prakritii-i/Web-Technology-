@@ -1,0 +1,119 @@
+<!--Lab 22
+A. Use CSS code to generate following layout. Use div and other required elements to
+present the layout more attractive and effective. Add the required contents in proper area as
+much as possible.
+
+Header goes here
+
+ 
+ 
+
+Main Content goes here
+ 
+
+Side Bar
+ 
+Images
+ 
+ 
+
+Footer goes here-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layout Example</title>
+    <style type="text/css">
+        .nav {
+            background-color: #008080;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav ul li {
+            color: white;
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .nav ul li:hover {
+            background-color: #00cccc;
+        }
+
+        .main {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .sidebar {
+        	font-size: 24px;
+            color: white;
+            width: 25%;
+            float: right;
+            padding: 20px;
+            height: 300px;
+            width: 30px;
+            background-color: #001a00;
+            border-radius: 8px;
+        }
+        .sidebar:hover {
+            transform: scale3d(1.2, 1.2, 1.2);
+        }
+        .img {
+            width: 75%;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        img:hover {
+            transform: scale3d(1.2, 1.2, 1.2);
+            padding: 10px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT US</li>
+            <li>NOTICES</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
+
+    <div class="main">
+        <h2 style="size: 24px;">Chameleon</h2>
+        <p>In the reptile world, there are some bizarre shapes and colors, but some of the most striking variations are found in the chameleons. These colorful lizards are known for their ability to change their color; their long, sticky tongue; and their eyes, which can be moved independently of each other.</p>
+    </div>
+
+    <div class="sidebar">
+        <h2>Side Bar</h2>
+        &#9743;<br>
+        &#128222;
+    </div>
+
+    <div class="img">
+        <h2>Images</h2>
+        <img src="pic1.jpg"> <img src="pic2.jpg"> <img src="pic1.jpg"> 
+    </div>
+
+    <div class="footer">
+        
+        <p>@Prakriti</p>
+    </div>
+</body>
+</html>

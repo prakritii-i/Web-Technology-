@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script type="text/javascript">
+        function checkPassword(){
+            var pw1=document.getElementById("pw1");
+            var pw2=document.getElementById("pw2");
+            if(pw1.value.trim()!=pw2.value.trim()){
+                alert("Passwords don't match. Please retype.");
+                return false;
+            }
+            alert("Password created successfully");
+            return true;
+        }
+    </script>
+    <style type="text/css"> 
+      #d{
+            background-color: lavender;
+            align-content: center;
+            height: 200px;
+            width: 200px;
+            border: 2px solid teal;
+            border-radius: 14px;
+            display: inline-block; /* Ensure the div takes only the required width */
+            vertical-align: middle; /* Center the div vertically */
+        }
+        
+        input[type="password"] {
+             /* Set font size to prevent shifting */
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+        <h3>Create a Password</h3>
+        <div id="d">
+            <input type="password" name="" id="pw1" placeholder="Enter Password"><br><br><br><br><br>
+            <input type="password" name="" id="pw2" placeholder="Confirm Password"><br><br><br>
+            <button onclick="return checkPassword()">Submit</button>
+        </div>
+    </center>
+</body>
+</html>

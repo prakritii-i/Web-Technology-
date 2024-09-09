@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navigation Bar</title>
+    <style type="text/css">
+        /* Resetting default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling the navigation bar */
+        .nav {
+            background-color: #008080;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centering the navigation items */
+        }
+
+        .nav ul li {
+            display: inline-block;
+            padding: 10px 20px; /* Adding padding to make the links more clickable */
+        }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav ul li:hover {
+            background-color: #005050; /* Darken the background color on hover */
+        }
+
+        /* Other sections styling */
+        .main {
+            height: 500px;
+            background-color: #f2f2f2;
+        }
+
+        .sidebar {
+            height: 500px;
+            background-color: #e0e0e0;
+        }
+
+        .img {
+            height: 300px;
+            background-image: url('your-image-url.jpg'); /* Add your image URL here */
+            background-size: cover;
+        }
+
+        .footer {
+            height: 100px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            line-height: 100px; /* Center text vertically */
+        }
+    </style>
+</head>
+<body>
+<nav class="nav">
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">NOTICES</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+</nav>
+<div class="main">Main Content</div>
+<div class="sidebar">Sidebar Content</div>
+<div class="img">Image Content</div>
+<div class="footer">Footer Content</div>
+</body>
+</html>

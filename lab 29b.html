@@ -1,0 +1,46 @@
+<!--The web page has two paragraphs with text contents and a paragraph without contents
+and several buttons for different activities. Perform following activities by using
+innerHTML method when it is clicked.
+a. “Add New Element” button for replacing existing text contents of paragraph one
+and two by new text content.
+b. “Add Element” button for adding paragraph one and two and placing it in
+paragraph three.
+c. “Delete Element” buttons for deleting text contents of paragraphs.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Manipulation</title>
+</head>
+<body>
+    <p id="paragraph1">This is paragraph one.</p>
+    <p id="paragraph2">This is paragraph two.</p>
+    <p id="paragraph3">This is paragraph three.</p>
+
+    <button onclick="replaceText()">Add New Element</button>
+    <button onclick="addElement()">Add Element</button>
+    <button onclick="deleteText('paragraph1')">Delete Content of Paragraph 1</button>
+    <button onclick="deleteText('paragraph2')">Delete Content of Paragraph 2</button>
+
+    <script>
+        function replaceText() {
+            var newText1 = "New text for paragraph one.";
+            var newText2 = "New text for paragraph two.";
+            document.getElementById("paragraph1").innerHTML = newText1;
+            document.getElementById("paragraph2").innerHTML = newText2;
+        }
+
+        function addElement() {
+            var paragraph1Content = document.getElementById("paragraph1").innerHTML;
+            var paragraph2Content = document.getElementById("paragraph2").innerHTML;
+            var combinedContent = paragraph1Content + "<br>" + paragraph2Content;
+            document.getElementById("paragraph3").innerHTML = combinedContent;
+        }
+
+        function deleteText(elementId) {
+            document.getElementById(elementId).innerHTML = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pattern Solutions</title>
+</head>
+<body>
+<h1>Pattern Solutions</h1>
+
+<!-- a. 1, 2, 3, …………………… 20 -->
+<h2>a. Pattern:</h2>
+<p id="patternA"></p>
+
+<!-- b. 2, 4, 6, ……………………. 20 -->
+<h2>b. Pattern:</h2>
+<p id="patternB"></p>
+
+<!-- c. 2, 4, 6, ……………………. upto 20th terms -->
+<h2>c. Pattern:</h2>
+<p id="patternC"></p>
+
+<!-- d. 1, 4, 9, …………………… upto 10th terms -->
+<h2>d. Pattern:</h2>
+<p id="patternD"></p>
+
+<!-- e. 2, 8, 18, …………………… upto 10th terms -->
+<h2>e. Pattern:</h2>
+<p id="patternE"></p>
+
+<!-- f. 100, 95, 90, …………………. 0 -->
+<h2>f. Pattern:</h2>
+<p id="patternF"></p>
+
+<!-- g. 1, 11, 111, 1111, 11111 -->
+<h2>g. Pattern:</h2>
+<p id="patternG"></p>
+
+<!-- h. 1, 22, 333, 4444, 55555 -->
+<h2>h. Pattern:</h2>
+<p id="patternH"></p>
+
+<!-- i. 1, 20, 300, 4000, 50000 -->
+<h2>i. Pattern:</h2>
+<p id="patternI"></p>
+
+<!-- j. 2, 4, 7, 11, 16, ………. upto 10th terms -->
+<h2>j. Pattern:</h2>
+<p id="patternJ"></p>
+
+<!-- k. 1, 1, 2, 3, 5, 8, …………… upto 15th terms -->
+<h2>k. Pattern:</h2>
+<p id="patternK"></p>
+
+<script>
+// a. 1, 2, 3, …………………… 20
+document.getElementById('patternA').innerText = Array.from({ length: 20 }, (_, i) => i + 1).join(", ");
+
+// b. 2, 4, 6, ……………………. 20
+document.getElementById('patternB').innerText = Array.from({ length: 10 }, (_, i) => (i + 1) * 2).join(", ");
+
+// c. 2, 4, 6, ……………………. upto 20th terms
+document.getElementById('patternC').innerText = Array.from({ length: 20 }, (_, i) => (i + 1) * 2).join(", ");
+
+// d. 1, 4, 9, …………………… upto 10th terms
+document.getElementById('patternD').innerText = Array.from({ length: 10 }, (_, i) => Math.pow(i + 1, 2)).join(", ");
+
+// e. 2, 8, 18, …………………… upto 10th terms
+document.getElementById('patternE').innerText = Array.from({ length: 10 }, (_, i) => Math.pow(i + 2, 2) - 2).join(", ");
+
+// f. 100, 95, 90, …………………. 0
+document.getElementById('patternF').innerText = Array.from({ length: 21 }, (_, i) => 100 - (5 * i)).join(", ");
+
+// g. 1, 11, 111, 1111, 11111
+document.getElementById('patternG').innerText = Array.from({ length: 5 }, (_, i) => parseInt("1".repeat(i + 1))).join(", ");
+
+// h. 1, 22, 333, 4444, 55555
+document.getElementById('patternH').innerText = Array.from({ length: 5 }, (_, i) => parseInt((i + 1).toString().repeat(i + 1))).join(", ");
+
+// i. 1, 20, 300, 4000, 50000
+document.getElementById('patternI').innerText = Array.from({ length: 5 }, (_, i) => parseInt((i + 1).toString().padEnd(i + 1, "0"))).join(", ");
+
+// j. 2, 4, 7, 11, 16, ………. upto 10th terms
+document.getElementById('patternJ').innerText = Array.from({ length: 10 }, (_, i) => (i + 1) * (i + 2) / 2).join(", ");
+
+// k. 1, 1, 2, 3, 5, 8, …………… upto 15th terms
+function fibonacci(n) {
+  if (n === 1) return [1];
+  if (n === 2) return [1, 1];
+  const sequence = [1, 1];
+  for (let i = 2; i < n; i++) {
+    sequence.push(sequence[i - 1] + sequence[i - 2]);
+  }
+  return sequence;
+}
+document.getElementById('patternK').innerText = fibonacci(15).join(", ");
+</script>
+
+</body>
+</html>

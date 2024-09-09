@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Square Calculator</title>
+</head>
+<body>
+  <h2>Enter a number to find its square:</h2>
+  <input type="number" id="inputNumber">
+  <button onclick="calculateSquare()">Calculate Square</button>
+  <p id="result"></p>
+
+  <script>
+    function calculateSquare() {
+      // Get the input number from the user
+      var inputNumber = document.getElementById('inputNumber').value;
+
+      // Check if input is empty or not a number
+      if (inputNumber === '' || isNaN(inputNumber)) {
+        alert('Please enter a valid number');
+        return;
+      }
+
+      // Calculate square of the input number
+      var square = inputNumber * inputNumber;
+
+      // Display the result
+      document.getElementById('result').innerText = 'Square of ' + inputNumber + ' is: ' + square;
+    }
+  </script>
+</body>
+</html>

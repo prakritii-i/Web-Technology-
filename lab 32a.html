@@ -1,0 +1,50 @@
+<!--A web page consisting of a heading, a paragraph and buttons: Add Element and
+Remove Element. Write a javascript code to add new elements( such as heading and
+paragraph) when the Add Element button is clicked and remove the created element
+when the Remove button is clicked.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Add and Remove Element</title>
+</head>
+<script type="text/javascript">
+	function addElement(){
+		var main=document.getElementById("main");
+		var paragraph=document.createElement("p");
+		main.appendChild(paragraph);
+		var text=document.createTextNode("This is new Paragraph text")
+		paragraph.appendChild(text);
+
+		var heading=document.createElement("h1");
+		main.appendChild(heading);
+		var text2=document.createTextNode("New heading");
+		heading.appendChild(text2);
+		
+	}
+	function removeElement(){
+		var mains = document.getElementById("main");
+        var paragraphs = main.getElementsByTagName("p");
+        if (paragraphs.length > 0) {
+            main.removeChild(paragraphs[paragraphs.length - 1]);
+        }
+	}
+	function removeHeading(){
+		var mains = document.getElementById("main");
+        var heading = main.getElementsByTagName("h1");
+        if (heading.length > 0) {
+            main.removeChild(heading[heading.length - 1]);
+        }
+	}
+</script>
+<body>
+	<div id="main">
+<h1>Heading 1</h1>
+<p>This is a Paragraph </p>
+</div>
+<button onclick="addElement()">Create new Elements</button>
+<button onclick="removeElement()">Remove Paragraph</button>
+<button onclick="removeHeading()">Remove Heading</button>
+</body>
+</html>

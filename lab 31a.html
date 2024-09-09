@@ -1,0 +1,58 @@
+<!--1. Write a javascript code to execute some HTML mouse event such as onclick, on
+dodbclick, onmouedown, onmouseup, onmouseover, onmouseout and more.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Events</title>
+<style>
+    #myDiv {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        margin: 50px auto;
+        text-align: center;
+        line-height: 200px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div id="myDiv"
+     onclick="onClick()"
+     ondblclick="onDoubleClick()"
+     onmousedown="onMouseDown()"
+     onmouseup="onMouseUp()"
+     onmouseover="onMouseOver()"
+     onmouseout="onMouseOut()">Click me!</div>
+
+<script>
+    /*function onClick() {
+        alert("Clicked!");
+    }*/
+
+    function onDoubleClick() {
+        alert("Double Clicked!");
+    }
+
+    function onMouseDown() {
+        console.log("Mouse Down");
+    }
+
+    function onMouseUp() {
+        console.log("Mouse Up");
+    }
+
+    function onMouseOver() {
+        document.getElementById("myDiv").style.backgroundColor = "lightgreen";
+    }
+
+    function onMouseOut() {
+        document.getElementById("myDiv").style.backgroundColor = "lightblue";
+    }
+</script>
+
+</body>
+</html>

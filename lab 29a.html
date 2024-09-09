@@ -1,0 +1,50 @@
+<!--The web page consists of two headings and four paragraphs and a ‘Change style’
+button. Use the style method and properties such as color, backgroundColor, fontStyle
+and others to add effect after clicking the button. Use following ways to access the
+HTML elements.
+a. getElementById()
+b. getElemnetsByClassName()
+c. getElementsByTagName()-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css"></style>
+</head>
+<body>
+<h1 id="h1">Heading 1</h1>
+<h2>Heading 2</h2>
+<p id="p1">Paragraph 1</p>
+<p class="p1">Paragraph 2</p>
+<p id="p2">Paragraph 3</p>
+<p class="p1">Paragraph 4</p>
+<script type="text/javascript">
+    function changeStyle() {
+        // Access elements by ID
+        var heading = document.getElementById("h1");
+        var heading2 = document.getElementsByTagName("h2")[0]; // Accessing the first h2 element
+        // Access elements by class name
+        var paragraphs = document.getElementsByClassName("p1");
+
+        // Change styles
+        heading.style.color = "blue";
+        heading.style.backgroundColor = "yellow";
+        heading.style.fontStyle = "italic";
+
+        heading2.style.color = "green";
+        heading2.style.backgroundColor = "orange";
+        heading2.style.fontStyle = "italic";
+
+        // Change styles for paragraphs with class "p1"
+        for (var i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].style.color = "black";
+            paragraphs[i].style.backgroundColor = "pink";
+            paragraphs[i].style.fontStyle = "italic";
+        }
+    }
+</script>
+<button onclick="changeStyle()">Change Style</button>
+</body>
+</html>

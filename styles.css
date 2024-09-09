@@ -1,0 +1,28 @@
+/* styles.css */
+
+/* Heading */
+h1 {
+    color: #006666;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Div */
+#div1 {
+    height: 50px;
+    width: 600px;
+    background: #ffccff;
+    margin: 0 auto; /* Center the div horizontally */
+    padding: 10px;
+    border: 2px solid #006666;
+    border-radius: 5px;
+}
+
+/* Paragraphs */
+p {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

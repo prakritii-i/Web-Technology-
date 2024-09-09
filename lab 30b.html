@@ -1,0 +1,47 @@
+<!--Collect two images of bulbs such as white and yellow bulbs. Display the white bulb as a
+default image for your page. Create two buttons “Turn On the Light” and “Turn Off the
+Light”. Write a javascript code for following activities:
+a. Display the image of a yellow bulb when the "Turn On the Light” button is
+clicked.
+b. Display the image of a white bulb when the  "Turn Off the Light” button is clicked.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function turnOn(){
+			var txt1=document.getElementById("off");
+			var txt2=txt1.src="on.jpg";
+
+		}
+		function turnOff(){
+			var txt1=document.getElementById("off");
+			var txt2=txt1.src="off.jpg";
+		}
+	</script>
+	<style type="text/css">
+		div{
+			background-color: lavender;
+			width: 400px;
+			border: 4px solid rebeccapurple;
+			border-radius: 10px;
+		}
+		.on{
+			background-color: springgreen;
+			margin-bottom: 5px;
+		}
+		.off{
+			background-color: red;
+		}
+
+	</style>
+</head>
+<body><center> <div>
+<img id="off" src="off.jpg"><br>
+<button class="on" onclick="turnOn()">Turn On</button>    
+<button class="off" onclick="turnOff()">Turn Off</button>
+</div></center>
+</body>
+</html>

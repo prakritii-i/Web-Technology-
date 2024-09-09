@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>layout</title>
+<meta charset="utf-8">
+<meta name="description" content="Free web Tutorials">
+<meta name="keywords" content="html.css, javascript">
+<meta name="author" content="john doe">
+<meta name="viewport" content="width=device-width, initial ">
+<style type="text/css">
+#nav {
+    width: 100%;
+    height: 60px;
+    background: orange;
+    display: flex; /* Make the nav items horizontal */
+    justify-content: center; /* Center the nav items horizontally */
+}
+
+#nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav ul li {
+    color: white;
+    display: inline-block;
+    padding: 20px; /* Increased padding for better spacing */
+    text-align: center;
+}
+
+
+#nav ul li a {
+    text-decoration: none; /* Remove default underline */
+    cursor: default; /* Prevent cursor change on hover */
+    color: white; /* Set text color */
+}
+
+#nav ul li:hover {
+    background-color: black; /* Orange color on hover */
+}
+
+.main {
+    background-color: lavender;
+    margin: 5px;
+    height: 500px;
+    padding: 5px;
+    border: 2px solid brown;
+    border-radius: 5px;
+    margin-left: 230px;
+    margin-right: 230px;
+}
+
+.sideright1 {
+    background-color: PEACHPUFF;
+    margin: 5px;
+    height: 250px;
+    width: 200px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: justify;
+    float: left;
+    clear: left;
+}
+
+.sideright2 {
+    background-color: PEACHPUFF;
+    margin: 5px;
+    
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: justify;
+    float: right;
+    clear: right;
+    opacity: 0.5;
+}
+
+#footer {
+    width: 100%;
+    height: 60px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+}
+
+.sideright2:hover {
+    transform: scale(1.2);
+}
+
+@media(max-width:600px) {
+    .sideright2 {
+        display: none;
+    }
+    img {
+        display: none;
+    }
+    .main {
+        background-color: pink;
+        margin-right: 5px;
+    }
+}
+
+@media(max-width:600px) {
+    .sideright1 {
+        display: none;
+    }
+}
+
+.main {
+    margin-right: 5px;
+}
+</style>
+</head>
+<body>
+    <div id="nav">
+        <nav class="nav">
+            <div class="navbar">
+                <ul>
+                    <li><a href="file.html">File</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="insert.html">Insert</a></li>
+                    <li><a href="layout.html">Layout</a></li>
+                    <li><a href="design.html">Design</a></li>
+                    <li><a href="view.html">View</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="sideright1">On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.</div>
+    <div class="sideright2"><img src="pic1.jpg"  ></div>
+    <div class="main">On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look. You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. </div>
+    <div id="footer" >@prakriti</div>
+</body>
+</html>

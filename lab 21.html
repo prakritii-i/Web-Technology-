@@ -1,0 +1,48 @@
+<!--Lab 21
+A. Design the button for your web page using div element. Using the CSS properties,
+present it more attractive as much as possible.
+B. Create a box sized 600px by 400px using div element. Add the properties such as border,
+gradient, shade etc.
+C. Type a text “WEB TECHNOLOGY”. Format the text using CSS properties such as text-
+decoration, weight, shade etc. so that it can be used as a “banner text” for your web page.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab 21</title>
+	<style type="text/css">
+		#d{
+			background-color: lavenderblush;
+			border: 2px solid blue;
+			height: 30px;
+			width: 90px;
+			border-radius: 13px;
+			box-shadow: 10px green;
+			margin: 20px;
+			color: dodgerblue;
+			font-weight: bold;
+			box-shadow: 5px 5px 5px 5px rgba(1, 250, 01, 0.3) ;
+			
+		}
+		#d:hover{
+			height:60px;
+			width: 130px;
+			cursor: pointer;
+			background-color: #ff1a1a;
+			font-weight: bolder;
+			border: 2px solid #ffe6e6;
+			color: white;
+
+		}
+		#d:active{
+			background-image: linear-gradient(to bottom right,pink, purple);
+		}
+	</style>
+</head>
+<body>
+<div id="d1"><button id="d">Click Me</button></div>
+<div id="d2"></div>
+<p id="p1"> </p>
+</body>
+</html>

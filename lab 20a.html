@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .menu {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .menu-title {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            margin-bottom: 10px;
+        }
+
+        .menu-link {
+            color: #fff;
+
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .menu-link:hover {
+            color: #007bff;
+            background-color: white;
+            border-radius: 2px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-title">Vertical Menu</div>
+        <ul class="menu-list">
+            <li class="menu-item"><a href="html_page.html" class="menu-link">HTML</a></li>
+            <li class="menu-item"><a href="css_page.html" class="menu-link">CSS</a></li>
+            <li class="menu-item"><a href="javascript_page.html" class="menu-link">JavaScript</a></li>
+            <li class="menu-item"><a href="bootstrap_page.html" class="menu-link">Bootstrap</a></li>
+            <li class="menu-item"><a href="jquery_page.html" class="menu-link">jQuery</a></li>
+            <li class="menu-item"><a href="xml_page.html" class="menu-link">XML</a></li>
+            <li class="menu-item"><a href="php_page.html" class="menu-link">PHP</a></li>
+        </ul>
+    </div>
+</body>
+</html>

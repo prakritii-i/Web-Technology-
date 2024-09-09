@@ -1,0 +1,44 @@
+<!--Create a login form consisting of User Name, User Password and Submit button using
+HTML and CSS. Write a javascript code for validation of form. User can’t leave blank
+while entering their name and password. And also, password should be more than 8
+characters.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form validation</title>
+	<script type="text/javascript">
+		function validate(){
+			var uname=document.getElementById("uname");
+			var pw=document.getElementById("pass");
+      		var ad=document.getElementById("add");
+			if(uname.value.trim()==""||pw.value==""){
+				alert("no blanks allowed")
+				return false;
+
+			}
+			if (pw.value.trim().length<8) {
+				alert("short")
+				pw.style.border="solid 3px red ";
+				return	false;
+				
+			}
+			
+		      
+				alert("Password created successfully");
+				return true;
+			
+		}
+	</script>
+</head>
+<body>
+<form onsubmit="return validate();" >
+	<input type="text" name="Username" id="uname"placeholder="Username"><br><br>
+	<input type="password" name="pass" id="pass" placeholder="Password"><br><br>
+     
+        <br><br>
+	<button>Submit</button>
+</form>
+</body>
+</html>

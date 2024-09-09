@@ -1,0 +1,39 @@
+<!--A web page consists of some contents such as div, heading and paragraph. Add a
+button named “Change Attribute” in your page. Define some CSS properties and store it
+in externally. Write a javascript code to apply that CSS property to your web contents
+when the Change Attribute button is clicked.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<script type="text/javascript">
+        function addcss() {
+            var heading = document.getElementsByTagName("h1")[0];
+            var paragraph = document.getElementsByTagName("p")[0];
+
+            // Apply CSS properties
+            heading.id = "test1";
+            paragraph.id = "test2";
+        }
+    </script>
+<style type="text/css">
+	#test1{
+		color: white;
+		background-color: black;
+
+	}
+	#test2{
+		color: white;
+		background-color: black;
+		font-style: italic;
+	}
+</style>
+<body>
+<h1>Heading</h1>
+<p>Paragraph</p>
+<button onclick="addcss()">Change Attribute</button>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem Solutions</title>
+</head>
+<body>
+<h1>Problem Solutions</h1>
+
+<!-- a. Check whether input number is odd or even -->
+<h2>Enter a number to check if it's odd or even:</h2>
+<input type="number" id="inputNumberA">
+<button onclick="checkOddEven()">Check Odd/Even</button>
+<p id="resultA"></p>
+
+<!-- b. Display the smaller of two numbers -->
+<h2>Enter two numbers to find the smaller one:</h2>
+<input type="number" id="numberB1">
+<input type="number" id="numberB2">
+<button onclick="findSmaller()">Find Smaller</button>
+<p id="resultB"></p>
+
+<!-- c. Display the middle of three numbers -->
+<h2>Enter three numbers to find the middle one:</h2>
+<input type="number" id="numberC1">
+<input type="number" id="numberC2">
+<input type="number" id="numberC3">
+<button onclick="findMiddle()">Find Middle</button>
+<p id="resultC"></p>
+
+<!-- d. Display the greatest, smallest, and middle of three numbers -->
+<h2>Enter three numbers to find greatest, smallest, and middle:</h2>
+<input type="number" id="numberD1">
+<input type="number" id="numberD2">
+<input type="number" id="numberD3">
+<button onclick="findGreatestSmallestMiddle()">Find</button>
+<p id="resultD"></p>
+
+<!-- e. Determine whether input number is positive, negative, or zero -->
+<h2>Enter a number to determine its sign:</h2>
+<input type="number" id="inputNumberE">
+<button onclick="checkSign()">Check Sign</button>
+<p id="resultE"></p>
+
+<!-- f. Check if a year is a leap year -->
+<h2>Enter a year to check if it's a leap year:</h2>
+<input type="number" id="inputYear">
+<button onclick="checkLeapYear()">Check Leap Year</button>
+<p id="resultF"></p>
+
+<!-- g. Check if a person is eligible to vote -->
+<h2>Enter your age to check eligibility to vote:</h2>
+<input type="number" id="age">
+<button onclick="checkVoteEligibility()">Check Eligibility</button>
+<p id="resultG"></p>
+
+<!-- h. Determine if a triangle can be formed -->
+<h2>Enter three sides of a triangle:</h2>
+<input type="number" id="side1">
+<input type="number" id="side2">
+<input type="number" id="side3">
+<button onclick="checkTriangleFormation()">Check Triangle</button>
+<p id="resultH"></p>
+
+<!-- i. Determine type of triangle -->
+<h2>Enter three sides of a triangle to determine its type:</h2>
+<input type="number" id="sideI1">
+<input type="number" id="sideI2">
+<input type="number" id="sideI3">
+<button onclick="checkTriangleType()">Check Triangle Type</button>
+<p id="resultI"></p>
+
+<!-- j. Check if a character is a vowel or consonant -->
+<h2>Enter a character to check if it's a vowel or consonant:</h2>
+<input type="text" id="charJ" maxlength="1">
+<button onclick="checkVowelConsonant()">Check</button>
+<p id="resultJ"></p>
+
+<!-- k. Find grade of a subject -->
+<h2>Enter marks of a subject to find its grade:</h2>
+<input type="number" id="marksK">
+<button onclick="findGrade()">Find Grade</button>
+<p id="resultK"></p>
+
+<script>
+// a. Check whether input number is odd or even
+function checkOddEven() {
+    var inputNumber = parseInt(document.getElementById('inputNumberA').value);
+    var result = (inputNumber % 2 === 0) ? "Even" : "Odd";
+    document.getElementById('resultA').innerText = "The number is " + result;
+}
+
+// b. Display the smaller of two numbers
+function findSmaller() {
+    var number1 = parseInt(document.getElementById('numberB1').value);
+    var number2 = parseInt(document.getElementById('numberB2').value);
+    var smaller = (number1 < number2) ? number1 : number2;
+    document.getElementById('resultB').innerText = "The smaller number is " + smaller;
+}
+
+// c. Display the middle of three numbers
+function findMiddle() {
+    var number1 = parseInt(document.getElementById('numberC1').value);
+    var number2 = parseInt(document.getElementById('numberC2').value);
+    var number3 = parseInt(document.getElementById('numberC3').value);
+    var sortedArray = [number1, number2, number3].sort(function(a, b){return a-b});
+    var middle = sortedArray[1];
+    document.getElementById('resultC').innerText = "The middle number is " + middle;
+}
+
+// d. Display the greatest, smallest, and middle of three numbers
+function findGreatestSmallestMiddle() {
+    var number1 = parseInt(document.getElementById('numberD1').value);
+    var number2 = parseInt(document.getElementById('numberD2').value);
+    var number3 = parseInt(document.getElementById('numberD3').value);
+    var sortedArray = [number1, number2, number3].sort(function(a, b){return a-b});
+    var smallest = sortedArray[0];
+    var greatest = sortedArray[2];
+    var middle = sortedArray[1];
+    document.getElementById('resultD').innerText = "Smallest: " + smallest + ", Middle: " + middle + ", Greatest: " + greatest;
+}
+
+// e. Determine whether input number is positive, negative, or zero
+function checkSign() {
+    var inputNumber = parseInt(document.getElementById('inputNumberE').value);
+    var result;
+    if (inputNumber > 0) {
+        result = "Positive";
+    } else if (inputNumber < 0) {
+        result = "Negative";
+    } else {
+        result = "Zero";
+    }
+    document.getElementById('resultE').innerText = "The number is " + result;
+}
+
+// f. Check if a year is a leap year
+function checkLeapYear() {
+    var year = parseInt(document.getElementById('inputYear').value);
+    var result = ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? "Leap year" : "Not a leap year";
+    document.getElementById('resultF').innerText = result;
+}
+
+// g. Check if a person is eligible to vote
+function checkVoteEligibility() {
+    var age = parseInt(document.getElementById('age').value);
+    var result = (age >= 18) ? "Eligible to vote" : "Not eligible to vote";
+    document.getElementById('resultG').innerText = result;
+}
+
+// h. Determine if a triangle can be formed
+function checkTriangleFormation() {
+    var side1 = parseInt(document.getElementById('side1').value);
+    var side2 = parseInt(document.getElementById('side2').value);
+    var side3 = parseInt(document.getElementById('side3').value);
+    var result = ((side1 + side2 > side3) && (side2 + side3 > side1) && (side1 + side3 > side2)) ? "Triangle can be formed" : "Triangle cannot be formed";
+    document.getElementById('resultH').innerText = result;
+}
+
+// i. Determine type of triangle
+function checkTriangleType() {
+    var side1 = parseInt(document.getElementById('sideI1').value);
+    var side2 = parseInt(document.getElementById('sideI2').value);
+    var side3 = parseInt(document.getElementById('sideI3').value);
+    var type;
+    if (side1 === side2 && side2 === side3) {
+        type = "Equilateral";
+    } else if (side1 === side2 || side2 === side3 || side1 === side3) {
+        type = "Isosceles";
+    } else {
+        type = "Scalene";
+    }
+    document.getElementById('resultI').innerText = "The triangle is " + type;
+}
+
+// j. Check if a character is a vowel or consonant
+function checkVowelConsonant() {
+    var char = document.getElementById('charJ').value.toLowerCase();
+    var vowels = "aeiou";
+    var result = vowels.includes(char) ? "Vowel" : "Consonant";
+    document.getElementById('resultJ').innerText = "The character is a " + result;
+}
+
+// k. Find grade of a subject
+function findGrade() {
+    var marks = parseInt(document.getElementById('marksK').value);
+    var grade;
+    if (marks >= 90) {
+        grade = "A+";
+    } else if (marks >= 80) {
+        grade = "A";
+    } else if (marks >= 70) {
+        grade = "B";
+    } else if (marks >= 60) {
+        grade = "C";
+    } else if (marks >= 50) {
+        grade = "D";
+    } else {
+        grade = "Fail";
+    }
+    document.getElementById('resultK').innerText = "Grade: " + grade;
+}
+</script>
+
+</body>
+</html>

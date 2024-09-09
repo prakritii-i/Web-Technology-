@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Methods</title>
+</head>
+<body>
+    <h2>String Manipulation</h2>
+    <script>
+        // String manipulation
+        var str = "Hello, World!";
+        document.write("Original String: " + str + "<br>");
+
+        // Using string methods
+        document.write("Length: " + str.length + "<br>");
+        document.write("Uppercase: " + str.toUpperCase() + "<br>");
+        document.write("Lowercase: " + str.toLowerCase() + "<br>");
+        document.write("Substring: " + str.substring(7) + "<br>");
+        var index = str.indexOf('o'); // Corrected line
+        var idx = index + 1;
+        document.write("Index of 'o': " + idx + "<br>"); // Corrected line
+    </script>
+
+    <h2>Mathematical Manipulation</h2>
+    <script>
+        // Mathematical manipulation
+        var num = 123.456;
+        document.write("Original Number: " + num + "<br>");
+
+        // Using mathematical methods
+        document.write("Absolute Value: " + Math.abs(num) + "<br>");
+        document.write("Square Root: " + Math.sqrt(num) + "<br>");
+        document.write("Ceiling Value: " + Math.ceil(num) + "<br>");
+        document.write("Floor Value: " + Math.floor(num) + "<br>");
+        document.write("Rounded Value: " + Math.round(num) + "<br>");
+    </script>
+
+    <h2>Date Manipulation</h2>
+    <script>
+        // Date manipulation
+        var currentDate = new Date();
+        document.write("Current Date: " + currentDate + "<br>");
+
+        // Using date methods
+        document.write("Year: " + currentDate.getFullYear() + "<br>");
+        document.write("Month: " + (currentDate.getMonth() + 1) + "<br>"); // Note: Months are zero-based
+        document.write("Day: " + currentDate.getDate() + "<br>");
+        document.write("Hour: " + currentDate.getHours() + "<br>");
+        document.write("Minutes: " + currentDate.getMinutes() + "<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add and Remove Element</title>
+</head>
+<script type="text/javascript">
+    function addElement() {
+        var main = document.getElementById("main");
+        var paragraph = document.createElement("p");
+        main.appendChild(paragraph);
+        var text = document.createTextNode("This is new Paragraph text");
+        paragraph.appendChild(text);
+    }
+
+    function removeElement() {
+        var main = document.getElementById("main");
+        var paragraphs = main.getElementsByTagName("p");
+        if (paragraphs.length > 0) {
+            main.removeChild(paragraphs[paragraphs.length - 1]);
+        }
+    }
+</script>
+<body>
+    <div id="main">
+        <h1>Heading 1</h1>
+        <p>This is a Paragraph </p>
+    </div>
+    <button onclick="addElement()">Create new Paragraph</button>
+    <button onclick="removeElement()">Remove Paragraph</button>
+</body>
+</html>

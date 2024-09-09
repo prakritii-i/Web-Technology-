@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem Solutions</title>
+</head>
+<body>
+<h1>Problem Solutions</h1>
+
+<!-- a. Square of a number -->
+<h2>a. Enter a number to find its square:</h2>
+<input type="number" id="inputNumberA">
+<button onclick="findSquare()">Calculate Square</button>
+<p id="resultA"></p>
+
+<!-- b. Average of five numbers -->
+<h2>b. Enter five numbers to find their average:</h2>
+<input type="number" id="number1">
+<input type="number" id="number2">
+<input type="number" id="number3">
+<input type="number" id="number4">
+<input type="number" id="number5">
+<button onclick="findAverage()">Calculate Average</button>
+<p id="resultB"></p>
+
+<!-- c. Sum, difference, product of two numbers -->
+<h2>c. Enter two numbers to find their sum, difference, and product:</h2>
+<input type="number" id="num1">
+<input type="number" id="num2">
+<button onclick="calculateOperations()">Calculate</button>
+<p id="resultC"></p>
+
+<!-- d. Cube and cube root of a number -->
+<h2>d. Enter a number to find its cube and cube root:</h2>
+<input type="number" id="inputNumberD">
+<button onclick="calculateCubeAndRoot()">Calculate Cube and Cube Root</button>
+<p id="resultD"></p>
+
+<!-- e. Area and perimeter of rectangle -->
+<h2>e. Enter length and breadth of rectangle:</h2>
+<input type="number" id="length">
+<input type="number" id="breadth">
+<button onclick="calculateRectangle()">Calculate Area and Perimeter</button>
+<p id="resultE"></p>
+
+<!-- f. Area and perimeter of square -->
+<h2>f. Enter length of square:</h2>
+<input type="number" id="sideLength">
+<button onclick="calculateSquare()">Calculate Area and Perimeter</button>
+<p id="resultF"></p>
+
+<!-- g. Area of triangle -->
+<h2>g. Enter base and height of triangle:</h2>
+<input type="number" id="base">
+<input type="number" id="height">
+<button onclick="calculateTriangleArea()">Calculate Area</button>
+<p id="resultG"></p>
+
+<!-- h. Circumference and area of circle -->
+<h2>h. Enter radius of circle:</h2>
+<input type="number" id="radius">
+<button onclick="calculateCircle()">Calculate Circumference and Area</button>
+<p id="resultH"></p>
+
+<!-- i. Volume and surface area of cuboid -->
+<h2>i. Enter length, breadth, and height of cuboid:</h2>
+<input type="number" id="cuboidLength">
+<input type="number" id="cuboidBreadth">
+<input type="number" id="cuboidHeight">
+<button onclick="calculateCuboid()">Calculate Volume and Surface Area</button>
+<p id="resultI"></p>
+
+<!-- j. Volume and surface area of cube -->
+<h2>j. Enter length of cube:</h2>
+<input type="number" id="cubeLength">
+<button onclick="calculateCube()">Calculate Volume and Surface Area</button>
+<p id="resultJ"></p>
+
+<!-- k. Simple interest -->
+<h2>k. Enter principal amount, rate, and time (in years):</h2>
+<input type="number" id="principal">
+<input type="number" id="rate">
+<input type="number" id="time">
+<button onclick="calculateSimpleInterest()">Calculate Simple Interest</button>
+<p id="resultK"></p>
+
+<script>
+// a. Square of a number
+function findSquare() {
+    var inputNumber = parseFloat(document.getElementById('inputNumberA').value);
+    var square = inputNumber * inputNumber;
+    document.getElementById('resultA').innerText = 'Square of ' + inputNumber + ' is: ' + square;
+}
+
+// b. Average of five numbers
+function findAverage() {
+    var sum = 0;
+    for (var i = 1; i <= 5; i++) {
+        var number = parseFloat(document.getElementById('number' + i).value);
+        sum += number;
+    }
+    var average = sum / 5;
+    document.getElementById('resultB').innerText = 'Average of the numbers is: ' + average;
+}
+
+// c. Sum, difference, product of two numbers
+function calculateOperations() {
+    var num1 = parseFloat(document.getElementById('num1').value);
+    var num2 = parseFloat(document.getElementById('num2').value);
+    var sum = num1 + num2;
+    var difference = num1 - num2;
+    var product = num1 * num2;
+    document.getElementById('resultC').innerText = 'Sum: ' + sum + ', Difference: ' + difference + ', Product: ' + product;
+}
+
+// d. Cube and cube root of a number
+function calculateCubeAndRoot() {
+    var number = parseFloat(document.getElementById('inputNumberD').value);
+    var cube = Math.pow(number, 3);
+    var cubeRoot = Math.cbrt(number);
+    document.getElementById('resultD').innerText = 'Cube of ' + number + ' is: ' + cube + ', Cube root of ' + number + ' is: ' + cubeRoot;
+}
+
+// e. Area and perimeter of rectangle
+function calculateRectangle() {
+    var length = parseFloat(document.getElementById('length').value);
+    var breadth = parseFloat(document.getElementById('breadth').value);
+    var area = length * breadth;
+    var perimeter = 2 * (length + breadth);
+    document.getElementById('resultE').innerText = 'Area of rectangle: ' + area + ', Perimeter of rectangle: ' + perimeter;
+}
+
+// f. Area and perimeter of square
+function calculateSquare() {
+    var length = parseFloat(document.getElementById('sideLength').value);
+    var area = length * length;
+    var perimeter = 4 * length;
+    document.getElementById('resultF').innerText = 'Area of square: ' + area + ', Perimeter of square: ' + perimeter;
+}
+
+// g. Area of triangle
+function calculateTriangleArea() {
+    var base = parseFloat(document.getElementById('base').value);
+    var height = parseFloat(document.getElementById('height').value);
+    var area = 0.5 * base * height;
+    document.getElementById('resultG').innerText = 'Area of triangle: ' + area;
+}
+
+// h. Circumference and area of circle
+function calculateCircle() {
+    var radius = parseFloat(document.getElementById('radius').value);
+    var circumference = 2 * Math.PI * radius;
+    var area = Math.PI * Math.pow(radius, 2);
+    document.getElementById('resultH').innerText = 'Circumference of circle: ' + circumference.toFixed(2) + ', Area of circle: ' + area.toFixed(2);
+}
+
+// i. Volume and surface area of cuboid
+function calculateCuboid() {
+    var length = parseFloat(document.getElementById('cuboidLength').value);
+    var breadth = parseFloat(document.getElementById('cuboidBreadth').value);
+    var height = parseFloat(document.getElementById('cuboidHeight').value);
+    var volume = length * breadth * height;
+    var surfaceArea = 2 * (length * breadth + breadth * height + height * length);
+    document.getElementById('resultI').innerText = 'Volume of cuboid: ' + volume + ', Surface area of cuboid: ' + surfaceArea;
+}
+
+// j. Volume and surface area of cube
+function calculateCube() {
+    var length = parseFloat(document.getElementById('cubeLength').value);
+    var volume = Math.pow(length, 3);
+    var surfaceArea = 6 * Math.pow(length, 2);
+    document.getElementById('resultJ').innerText = 'Volume of cube: ' + volume + ', Surface area of cube: ' + surfaceArea;
+}
+
+// k. Simple interest
+function calculateSimpleInterest() {
+    var principal = parseFloat(document.getElementById('principal').value);
+    var rate = parseFloat(document.getElementById('rate').value);
+    var time = parseFloat(document.getElementById('time').value);
+    var interest = (principal * rate * time) / 100;
+    document.getElementById('resultK').innerText = 'Simple interest: ' + interest;
+}
+</script>
+
+</body>
+</html>

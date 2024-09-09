@@ -1,0 +1,36 @@
+<!--Write a javascript code to display the output different ways:
+a. Writing into the HTML output using document.write().
+a. Writing into an alert box, using window.alert().
+a. Writing into the browser console, using console.log().
+a. Writing into an HTML element, using innerHTML. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Output</title>
+</head>
+<body>
+
+<!-- Output will be displayed here -->
+<div id="output"></div>
+
+<script>
+    // Define the output message
+    var message = "Hello, world!";
+
+    // 1. Writing into the HTML output using document.write()
+    document.write("<h1>" + message + "</h1>");
+
+    // 2. Writing into an alert box, using window.alert()
+    window.alert(message);
+
+    // 3. Writing into the browser console, using console.log()
+    console.log(message);
+
+    // 4. Writing into an HTML element, using innerHTML
+    document.getElementById("output").innerHTML = "<h2>" + message + "</h2>";
+</script>
+
+</body>
+</html>

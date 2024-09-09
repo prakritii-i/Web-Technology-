@@ -1,0 +1,22 @@
+<!--The web page has images and a change image button. Write a javascript code to
+replace the existing image by a new one when the button is clicked.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>innerHTML</title>
+    <script type="text/javascript" >
+    	
+		 function changeContent(){
+		 	var txt1 = document.getElementById("img1");
+		    var txt2 = txt1.src = "pic2.jpg";
+		 }
+    </script>
+</head>
+<body>
+
+    <img src="pic1.jpg" id="img1">
+<br>
+    <button onclick="changeContent()" >Click here to Change</button>
+</body>
+</html>
+
